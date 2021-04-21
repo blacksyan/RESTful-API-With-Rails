@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.permit(:name, :progress_percentage)
+    params.permit(:name, :progress_percentage, :target_todo_id)
   end
 
   def set_todo
