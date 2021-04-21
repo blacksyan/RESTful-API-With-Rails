@@ -34,7 +34,7 @@ class TodosController < ApplicationController
 
   def todo_params
     # whitelist params
-    params.permit(:title)
+    params.permit(:title, :description)
   end
 
   def set_todo
