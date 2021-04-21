@@ -20,7 +20,9 @@ class ItemsController < ApplicationController
 
   # PUT /todos/:todo_id/items/:id
   def update
-    @item.update(item_params)
+    update_params = item_params
+    update_params[:todo_id] = item_params.delete(:target_todo_id)
+    @item.update(update_params)
     head :no_content
   end
 
