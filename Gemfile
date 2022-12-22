@@ -26,6 +26,7 @@ gem 'jwt'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rack-cors'
+gem 'figaro'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -41,6 +42,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'capistrano', '~> 3.15'
+  gem 'capistrano-rails', '~> 1.6.1'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+  gem 'capistrano3-nginx', '~> 2.0'
+  gem 'capistrano-figaro-yml', '~> 1.0.5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
